@@ -40,9 +40,6 @@ class EvenAndOdds extends Component {
         })
     }
 
-    // <button onClick={() => this.handleAddFriend()}>Add Friend</button>
-
-
     render() {
         return (
             <div className="puzzleBox evenAndOddPB">
