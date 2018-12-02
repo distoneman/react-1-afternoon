@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-class Sum extends Component{
-    constructor(){
+class Sum extends Component {
+    constructor() {
         super()
 
         this.state = ({
@@ -9,23 +9,27 @@ class Sum extends Component{
             num2: 0,
             sum: null
         })
+        // bind function
+        // this.handleChangeNum1 = this.handleChangeNum1.bind(this)
+
     }
 
-    handleChangeNum1(num){
+
+    handleChangeNum1(num) {
         console.log(`num1 ${num}`)
         this.setState({
-            num1: parseInt(num,10)
+            num1: parseInt(num, 10)
         })
     }
 
-    handleChangeNum2(num){
+    handleChangeNum2(num) {
         console.log(`num2 ${num}`)
         this.setState({
-            num2: parseInt(num,10)
+            num2: parseInt(num, 10)
         })
     }
 
-    sumNumbers(num1, num2){
+    sumNumbers(num1, num2) {
         console.log(num1 + ' + ' + num2)
         let sum = num1 + num2
         this.setState({
@@ -33,16 +37,16 @@ class Sum extends Component{
         })
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div className="puzzleBox sumPB">
                 <h4>Sum</h4>
                 <input className="inputLine"
-                    onChange={(evt)=>this.handleChangeNum1(evt.target.value)}></input>
+                    onChange={(evt) => this.handleChangeNum1(evt.target.value)}></input>
                 <input className="inputLine"
-                    onChange={(evt)=>this.handleChangeNum2(evt.target.value)}></input>
+                    onChange={(evt) => this.handleChangeNum2(evt.target.value)}></input>
                 <button className="confirmationButton"
-                    onClick={()=>this.sumNumbers(this.state.num1, this.state.num2)}>Sum</button>
+                    onClick={() => this.sumNumbers(this.state.num1, this.state.num2)}>Sum</button>
                 <span className="resultsBox">Sum: {this.state.sum}</span>
             </div>
         )
