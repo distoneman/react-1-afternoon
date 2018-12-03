@@ -20,6 +20,7 @@ class FilterString extends Component{
     }
 
     filterString(str){
+        console.log("filter string function")
         console.log(this.state.unFilteredArray)
         console.log(str)
         let workingArray = []
